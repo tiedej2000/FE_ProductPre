@@ -1,0 +1,149 @@
+body, html{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --green: hsl(158, 32%, 37%);
+    --grey: hsl(228, 12%, 48%);
+}
+
+body{
+   background-color: hsl(26, 40%, 92%); 
+}
+
+.main-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background-color: white;
+    height: 400px;
+    width: 600px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.image-section{
+    width: 300px;
+    height: 400px;
+}
+
+.image-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.text-section{
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    font-family: "Montserrat", serif;
+}
+
+.text-section h1, .prices{
+    font-family: "Fraunces", serif;
+}
+
+.item{
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    color: var(--grey);
+    font-weight: 500;
+}
+
+.main-header{
+    line-height: 1;
+    width: 255px;
+    margin-top: -10px;
+}
+
+.description{
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--grey);
+    font-weight: 500;
+    width: 255px;
+}
+
+.prices{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.current-price{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 20px 0;
+    color: var(--green);
+}
+
+.previous-price{
+    font-size: 0.7rem;
+    color: var(--grey);
+    text-decoration: line-through;
+}
+
+.cart button{
+    width: 100%;
+    height: 40px;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--green);
+    font-weight: 700;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(157, 44%, 17%);
+}
+
+@media(max-width:600px){
+    main{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        height: 73vh;
+    }
+
+    .text-section{
+        padding: 20px 0 20px 20px;
+        width: 85vw;
+    }
+
+    .main-header h1{
+        width: 315px;
+    }
+
+    .image-section{
+        height: 30vh;
+        width: 100%;
+    }
+
+    .image-section img{
+        border-radius: 10px 10px 0 0;
+    }
+    .cart button{
+        width: 300px; ;
+    }
+
+}
